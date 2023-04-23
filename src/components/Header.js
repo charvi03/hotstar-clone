@@ -1,5 +1,16 @@
 import styled from "styled-components";
+import { auth, provider } from "../firebase";
 const Header = (props) => {
+  const handleAuth = () => {
+    auth
+      .signInWithPopup(provider)
+      .then((result) => {
+        console.log(result);
+      })
+      .catch((error) => {
+        alert(error.message);
+      });
+  };
   return (
     <Nav>
       <Logo>
@@ -31,7 +42,7 @@ const Header = (props) => {
           <span>SERIES</span>
         </a>
       </NavMenu>
-      <Login>Login</Login>
+      <Login onClick={handleAuth}>Login</Login>
     </Nav>
   );
 };
@@ -73,7 +84,7 @@ const NavMenu = styled.div`
   margin-right: auto;
   margin-left: 25px;
 
-   /* @media (max-width: 768px) {
+  /* @media (max-width: 768px) {
     display: none;
   } */
   a {
