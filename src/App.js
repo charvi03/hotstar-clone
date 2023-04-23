@@ -9,7 +9,9 @@ function App() {
       <Router>
         <Header />
         <Routes>
-          <Route exact path="/" element={<Login />}></Route>
+          <Route exact path="/" element={<Login />}>
+            
+          </Route>
         </Routes>
       </Router>
     </div>

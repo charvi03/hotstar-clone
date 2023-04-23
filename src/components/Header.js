@@ -62,8 +62,6 @@ const Logo = styled.a`
   }
 `;
 const NavMenu = styled.div`
-   {
-  }
   align-items: center;
   display: flex;
   flex-flow: row nowrap;
@@ -75,7 +73,7 @@ const NavMenu = styled.div`
   margin-right: auto;
   margin-left: 25px;
 
-  /* @media (max-width: 768px) {
+   /* @media (max-width: 768px) {
     display: none;
   } */
   a {
@@ -133,7 +131,7 @@ const Login = styled.a`
   &:hover {
     background-color: #f9f9f9;
     color: #000;
-    border-color: transparent;;
+    border-color: transparent;
   }
 `;
 
