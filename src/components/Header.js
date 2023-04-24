@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import { useDispatch, useSelector } from "react-redux";
-import { useNavigate } from "react-router-dom"
+import { useNavigate } from "react-router-dom";
 import { auth, provider } from "../firebase";
 import {
   selectUserName,
@@ -69,7 +69,11 @@ const Header = (props) => {
               <span>SERIES</span>
             </a>
           </NavMenu>
-          <UserImg src={userPhoto} alt={userPhoto} />
+          <UserImg
+            src={userPhoto}
+            alt={userPhoto}
+            referrerPolicy="no-referrer"
+          />
         </>
       )}
     </Nav>
@@ -176,5 +180,8 @@ const Login = styled.a`
 `;
 const UserImg = styled.img`
   height: 100%;
+  border-radius: 40px;
+  margin:10px;
+  padding:5px;
 `;
 export default Header;
