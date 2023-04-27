@@ -19,7 +19,7 @@ const Header = (props) => {
     auth.onAuthStateChanged(async (user) => {
       if (user) {
         setUser(user);
-        history.push("/home");
+        history("/home");
       }
     });
   }, [userName]);
